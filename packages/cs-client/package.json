@@ -9,8 +9,9 @@
   "scripts": {    
     "link": "yarn link",
     "typescript": "concurrently \"cpx \"src/**/*.{html,png,jpg,css}\" dist --watch\"  \"tsc -w\"",
-    "dev": "tsc && nodemon --watch webpack.config.js --exec \"webpack --watch --env dev\"",
-    "build": "webpack --watch --env build"
+    "dev": "tsc && nodemon --watch webpack.config.js --exec \"webpack --watch --mode=development\"",
+    "build": "webpack --watch --mode=development",
+    "production": "webpack --mode=production"
   },
   "publishConfig": {
     "access": "public"
@@ -23,7 +24,7 @@
   "devDependencies": {    
     "@csnext/cs-core": "^0.0.7",
     "@types/geojson": "^7946.0.0",
-    "awesome-typescript-loader": "~3.4.1",
+    "ts-loader": "4.0.0-beta.0",
     "concurrently": "^3.5.1",
     "cpx": "^1.5.0",
     "css-loader": "^0.28.9",
@@ -46,7 +47,8 @@
     "vue-loader": "^13.7.0",
     "vue-property-decorator": "^6.0.0",
     "vue-router": "^3.0.1",
-    "webpack": "~3.10.0",
+    "webpack": "next",
+    "webpack-cli": "^2.0.4",
     "webpack-bundle-analyzer": "^2.9.2",
     "webpack-dev-server": "~2.11.0",
     "yargs": "^10.1.1"

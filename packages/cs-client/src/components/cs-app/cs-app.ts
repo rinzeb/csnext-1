@@ -69,6 +69,7 @@ export class CsApp extends Vue {
     }
   }
 
+  /** update windowSize in app-state */
   public onResize() {
     this.app.windowSize = { x: window.innerWidth, y: window.innerHeight };
   }

@@ -17,4 +17,5 @@ export class WebRequestDatasourceProcessor implements IDatasourceProcessor {
   }
 }
 
+// add this datasource to available datasources
 DatasourceManager.add(new WebRequestDatasourceProcessor());
